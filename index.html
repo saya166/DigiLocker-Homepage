@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digilocker Clone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: "770px",
+            md: "990px",
+            lg: "1200px",
+          },
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              navyBlue: "#081854",
+              skyBlue: "#3880ff",
+              grad1: "#538FFB",
+              grad2: "#5737D6",
+              myOrange: "#f1aa4d",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="">
+    <div class="dl-header flex flex-col">
+      <div class="dl-header-1 flex flex-col">
+        <div class="dl-h-top bg-navyBlue text-white p-1 flex justify-around">
+          <div class="dl-h-top-left flex">
+            <img
+              src="./assets/header/top/indian_flag.jpg"
+              alt="Indian Flag"
+              class="flag w-[24px]"
+            />
+            <h3 class="font-bold text-[14px] ml-4">Government of India</h3>
+          </div>
+          <div class="dl-h-top-right hidden md:flex">
+            <div class="nav-links flex font-semibold">
+              <a href="#" class="nav-link">A+</a>
+              <a href="#" class="nav-link ml-8">A-</a>
+              <a href="#" class="nav-link ml-8">A</a>
+              <a href="#" class="nav-link ml-8">English <span>&#9660;</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="dl-h-center py-4 flex justify-around">
+          <div class="dl-h-center-left flex gap-4">
+            <img
+              src="./assets/header/top/digilocker_logo.png"
+              alt="digilocker-logo"
+              class="w-[130px] h-[30px]"
+            />
+            <img
+              src="./assets/header/top/dlg20_logo_g20.png"
+              alt=""
+              class="w-[55px] h-[30px] hidden md:flex"
+            />
+          </div>
+          <div class="dl-h-center-right bg-white font-semibold flex gap-3">
+            <button class="login text-skyBlue hidden md:flex">SIGN IN</button>
+            <span>│</span>
+            <button
+              class="login text-white bg-skyBlue border-0 border-black rounded-2xl w-[100px] py-1"
+            >
+              SIGN UP
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="dl-header-2">
+        <div class="dl-h-bottom">
+          <img
+            src="./assets/header/bottom/1_quiz_banner_web.jpg"
+            alt=""
+            class="w-full"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="dl-body flex flex-col items-center my-8 gap-y-16">
+      <div
+        class="dl-b1-whatsNew flex flex-col gap-6 md:flex-row md:gap-12 md:justify-around md:items-center"
+      >
+        <h2
+          class="text-black hidden lg:flex font-bold text-[30px] md:text-[20px]"
+        >
+          New in <br />
+          DigiLocker
+        </h2>
+        <div
+          class="cards flex flex-col items-center gap-y-8 lg:flex-row md:gap-3"
+        >
+          <img
+            src="./assets/body/1/slider1.jpg"
+            alt=""
+            class="card w-[540px] md:w-[550px] md:h-[180px] lg:w-[250px] lg:h-[120px]"
+          />
+          <img
+            src="./assets/body/1/slider4.jpg"
+            alt=""
+            class="card w-[540px] md:w-[550px] md:h-[180px] lg:w-[250px] lg:h-[120px]"
+          />
+          <img
+            src="./assets/body/1/slider3.jpg"
+            alt=""
+            class="card w-[540px] md:w-[550px] md:h-[180px] lg:w-[250px] lg:h-[120px]"
+          />
+        </div>
+      </div>
+      <div class="dl-b2-certificates flex justify-around gap-x-3">
+        <button
+          class="w-[370px] md:w-[270px] border-solid border-2 border-gray-200 p-2 font-semibold rounded-3xl hover:bg-skyBlue hover:text-white"
+        >
+          <span class="text-skyBlue hover:text-white">&#8605;</span> Covid
+          Vaccine Certificate
+        </button>
+        <button
+          class="w-[270px] hidden md:flex md:justify-center md:gap-x-1 text-center border-solid border-2 border-gray-200 p-2 font-semibold rounded-3xl hover:bg-skyBlue hover:text-white"
+        >
+          <span class="text-skyBlue">&#8605;</span> Class XII Marksheet
+        </button>
+        <button
+          class="w-[270px] hidden md:flex md:justify-center md:gap-x-1 border-solid border-2 border-gray-200 p-2 font-semibold rounded-3xl hover:bg-skyBlue hover:text-white"
+        >
+          <span class="text-skyBlue">&#8605;</span> Class X Marksheet
+        </button>
+      </div>
+      <div
+        class="dl-b3-noOfPeople flex flex-col gap-x-8 lg:flex-row lg:justify-around px-32"
+      >
+        <div
+          class="dl-b3-noOfPeople-top hidden lg:flex lg:flex-col lg:justify-center gap-y-4 w-[50%]"
+        >
+          <h2 class="font-bold text-black text-[25px]">
+            Document Wallet to Empower Citizens
+          </h2>
+          <p class="text-[15px]">
+            DigiLocker is a flagship initiative of Ministry of Electronics & IT
+            (MeitY) under Digital India programme.DigiLocker aims at 'Digital
+            Empowerment' of citizen by providing access to authentic digital
+            documents to citizen's digital document wallet.Digilocker is a
+            secure cloud based platform for storage,sharing and verification of
+            documents & certificates.
+          </p>
+        </div>
+        <div
+          class="dl-b3-noOfPeople-bottom flex flex-col p-4 w-[530px] lg:w-[50%] border-0 border-gray-100 rounded-lg bg-gradient-to-r from-indigo-400 via-purple-350 to-pink-400"
+        >
+          <div class="dl-b3-noOfPeople-bottom-top flex justify-around">
+            <div
+              class="dl-b3-noOfPeople-bottom-top-left flex flex-col gap-y-4 items-center"
+            >
+              <img
+                src="./assets/body/2/users.png"
+                alt="users"
+                class="users rounded-full h-[60px] w-[60px]"
+              />
+              <h3 class="text-navyBlue font-bold text-[18px]">
+                193.68 Million
+              </h3>
+              <h4 class="text-[15px] text-black">Registered Users</h4>
+            </div>
+            <div
+              class="dl-b3-noOfPeople-bottom-top-right flex flex-col gap-y-4 items-center"
+            >
+              <img
+                src="./assets/body/2/paper.png"
+                alt="paper"
+                class="paper rounded-full h-[60px] w-[60px]"
+              />
+              <h3 class="text-navyBlue font-bold text-[18px]">6.27 Billion</h3>
+              <h4 class="text-[15px] text-black">Issued Documents</h4>
+            </div>
+          </div>
+          <div class="dl-b3-noOfPeople-bottom-bottom flex justify-center mt-8">
+            <button class="bg-white p-1 border-0 rounded-md">
+              View Statistics &#8594;
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="dl-b4-Documents flex flex-col items-center gap-y-5 gap-x-8">
+        <div class="dl-b4-Documents-top">
+          <h4 class="font-bold text-[17px]">
+            Find Documents based on Categories
+          </h4>
+        </div>
+        <div class="dl-b4-Documents-center">
+          <div
+            class="dl-b4-Documents-center-top flex flex-wrap justify-evenly gap-x-5 gap-y-5"
+          >
+            <div
+              class="b4-card h-[170px] flex flex-col justify-center w-[150px] items-center bg-white py-2 px-4 hover:border-2 hover:border-b-4 hover:border-gray-100"
+            >
+              <img
+                src="./assets/body/3/card1-img.png"
+                alt="services"
+                class="h-[50px]"
+              />
+              <h6 class="text-black text-center pt-5 text-[15px]">
+                Central Government
+              </h6>
+            </div>
+            <div
+              class="b4-card h-[170px] flex flex-col justify-center w-[150px] items-center bg-white py-2 px-4 hover:border-2 hover:border-gray-100"
+            >
+              <img
+                src="./assets/body/3/card2-img.png"
+                alt="services"
+                class="h-[50px]"
+              />
+              <h6 class="text-black text-center pt-5 text-[15px]">
+                State Government
+              </h6>
+            </div>
+            <div
+              class="b4-card h-[170px] flex flex-col justify-center w-[150px] items-center bg-white py-2 px-4 hover:border-2 hover:border-gray-100"
+            >
+              <img
+                src="./assets/body/3/card3-img.png"
+                alt="services"
+                class="h-[50px]"
+              />
+              <h6 class="text-black text-center pt-5 text-[15px]">
+                Ministry of Defence
+              </h6>
+            </div>
+            <div
+              class="b4-card h-[170px] flex flex-col justify-center w-[150px] items-center bg-white py-2 px-4 hover:border-2 hover:border-gray-100"
+            >
+              <img
+                src="./assets/body/3/card4-img.png"
+                alt="services"
+                class="h-[50px]"
+              />
+              <h6 class="text-black text-center pt-5 text-[15px]">
+                Transport Departments
+              </h6>
+            </div>
+            <div
+              class="b4-card h-[170px] flex flex-col justify-center w-[150px] items-center bg-white py-2 px-4 hover:border-2 hover:border-gray-100"
+            >
+              <img
+                src="./assets/body/3/card5-img.png"
+                alt="services"
+                class="h-[50px]"
+              />
+              <h6 class="text-black text-center pt-5 text-[15px]">
+                National Service Scheme
+              </h6>
+            </div>
+            <div
+              class="b4-card h-[170px] flex flex-col justify-center w-[150px] items-center bg-white py-2 px-4 hover:border-2 hover:border-gray-100"
+            >
+              <img
+                src="./assets/body/3/card6-img.png"
+                alt="services"
+                class="h-[50px]"
+              />
+              <h6 class="text-black text-center pt-5 text-[15px]">
+                Identity Pass
+              </h6>
+            </div>
+          </div>
+          <div
+            class="dl-b4-Documents-center-m flex flex-wrap justify-evenly gap-x-5 gap-y-5"
+          >
+            <div
+              class="b4-card h-[170px] flex flex-col justify-center w-[150px] items-center bg-white py-2 px-4 hover:border-2 hover:border-gray-100"
+            >
+              <img
+                src="./assets/body/3/card7-img.png"
+                alt="services"
+                class="h-[50px]"
+              />
+              <h6 class="text-black text-center pt-5 text-[15px]">
+                Education & Learning
+              </h6>
+            </div>
+            <div
+              class="b4-card h-[170px] flex flex-col justify-center w-[150px] items-center bg-white py-2 px-4 hover:border-2 hover:border-gray-100"
+            >
+              <img
+                src="./assets/body/3/card8-img.png"
+                alt="services"
+                class="h-[50px]"
+              />
+              <h6 class="text-black text-center pt-5 text-[15px]">
+                Banking & Insurance
+              </h6>
+            </div>
+            <div
+              class="b4-card h-[170px] flex flex-col justify-center w-[150px] items-center bg-white py-2 px-4 hover:border-2 hover:border-gray-100"
+            >
+              <img
+                src="./assets/body/3/card9-img.png"
+                alt="services"
+                class="h-[50px]"
+              />
+              <h6 class="text-black text-center pt-5 text-[15px]">
+                Health & Wellness
+              </h6>
+            </div>
+            <div
+              class="b4-card h-[170px] flex flex-col justify-center w-[150px] items-center bg-white py-2 px-4 hover:border-2 hover:border-gray-100"
+            >
+              <img
+                src="./assets/body/3/card10-img.png"
+                alt="services"
+                class="h-[50px]"
+              />
+              <h6 class="text-black text-center pt-5 text-[15px]">
+                Sports & Culture
+              </h6>
+            </div>
+            <div
+              class="b4-card h-[170px] flex flex-col justify-center w-[150px] items-center bg-white py-2 px-4 hover:border-2 hover:border-gray-100"
+            >
+              <img
+                src="./assets/body/3/card11-img.png"
+                alt="services"
+                class="h-[50px]"
+              />
+              <h6 class="text-black text-center pt-5 text-[15px]">
+                Government & Public Sector
+              </h6>
+            </div>
+            <div
+              class="b4-card h-[170px] flex flex-col justify-center w-[150px] items-center bg-white py-2 px-4 hover:border-2 hover:border-gray-100"
+            >
+              <img
+                src="./assets/body/3/card12-img.png"
+                alt="services"
+                class="h-[50px]"
+              />
+              <h6 class="text-black text-center pt-5 text-[15px]">
+                Industry & Private Sector
+              </h6>
+            </div>
+          </div>
+          <div
+            class="dl-b4-Documents-center-bottom flex flex-wrap justify-evenly gap-x-5 gap-y-5"
+          >
+            <div
+              class="b4-card h-[170px] flex flex-col justify-center w-[150px] items-center bg-white py-2 px-4 hover:border-2 hover:border-gray-100"
+            >
+              <img
+                src="./assets/body/3/card13-img.png"
+                alt="services"
+                class="h-[50px]"
+              />
+              <h6 class="text-black text-center pt-5 text-[15px]">
+                Most Popular Documents
+              </h6>
+            </div>
+            <div
+              class="b4-card h-[170px] flex flex-col justify-center w-[150px] items-center bg-white py-2 px-4 hover:border-2 hover:border-gray-100"
+            >
+              <img
+                src="./assets/body/3/card14-img.png"
+                alt="services"
+                class="h-[50px]"
+              />
+              <h6 class="text-black text-center pt-5 text-[15px]">
+                Other Organisations
+              </h6>
+            </div>
+          </div>
+        </div>
+        <div class="dl-b4-Documents-bottom mt-[-30px]">
+          <button
+            class="btn rounded-2xl w-[250px] bg-gray-100 hover:bg-gray-200 p-2 font-bold border-b-4"
+          >
+            VIEW ALL DOCUMENTS
+          </button>
+        </div>
+      </div>
+      <div
+        class="dl-b5-gettingStarted py-5 w-full bg-sky-100 h-[200px] flex flex-col lg:flex-row flex-wrap justify-around gap-x-3 items-center"
+      >
+        <div class="dl-b5-gettingStarted-left">
+          <h3 class="text-black font-bold text-[20px]">
+            Getting started is <br />
+            quick and easy
+          </h3>
+        </div>
+        <div class="dl-b5-gettingStarted-right flex items-center gap-x-8">
+          <div class="part-1 gap-y-4 flex flex-col items-center">
+            <img
+              src="./assets/body/4/user.png"
+              alt="start-icons"
+              class="h-[45px]"
+            />
+            <h3 class="text-[15px] text-navyBlue font-semibold">
+              Register Yourself
+            </h3>
+          </div>
+
+          <span>&#8649;</span>
+          <div class="part-1 gap-y-4 flex flex-col items-center">
+            <img
+              src="./assets/body/4/fingerprint.png"
+              alt="start-icons"
+              class="h-[45px]"
+            />
+            <h3 class="text-[15px] text-navyBlue font-semibold">
+              Verify Yourself
+            </h3>
+          </div>
+
+          <span>&#8649;</span>
+          <div class="part-1 gap-y-4 flex flex-col items-center">
+            <img
+              src="./assets/body/4/download.png"
+              alt="start-icons"
+              class="h-[45px]"
+            />
+            <h3 class="text-[15px] text-navyBlue font-semibold">
+              Fetch your Documents
+            </h3>
+          </div>
+        </div>
+      </div>
+      <div
+        class="dl-b6-signUp bg-gradient-to-r from-grad1 to-grad2 w-full h-[100px] mt-[-65px] flex flex-col p-2 justify-center items-center md:flex-row gap-y-4 flex-wrap md:justify-around"
+      >
+        <div class="hidden dl-b6-signUp-left md:flex">
+          <h5 class="text-white font-semibold">
+            DigiLocker is a secure cloud based platform for storage,sharing and
+            verification of documents & certificates
+          </h5>
+        </div>
+        <div class="dl-b6-signUp-right">
+          <button
+            class="bg-white border-2 border-gray-100 rounded-md p-1 w-[150px] hover:bg-gray-200"
+          >
+            SIGN UP NOW
+          </button>
+        </div>
+      </div>
+      <div
+        class="dl-b7-dlApp gap-y-4 md:gap-x-20 flex flex-col md:flex-row justify-around items-center flex-wrap"
+      >
+        <div
+          class="dl-b7-dlApp-left bg-myOrange border-0 border-gray-40 rounded-lg flex flex-col justify-center items-center md:flex-row flex-wrap gap-x-8 p-8"
+        >
+          <div class="dl-b7-dlApp-left-left flex flex-col gap-y-4">
+            <h3 class="text-navyBlue font-semibold text-[18px]">
+              Become a DigiLocker <br />
+              Partner Organisation
+            </h3>
+            <h5 class="text-black text-[13px]">
+              Get registered as a DigiLocker Issuer<br />
+              or Requester
+            </h5>
+            <button
+              class="bg-white text-black font-semibold text-[14px] w-[150px] border-b-2 border-b-gray-500 border-r-2 border-gray-500 rounded-b-md hover:bg-gray-200"
+            >
+              GET REGISTERED
+            </button>
+          </div>
+          <div class="dl-b7-dlApp-left-right">
+            <img src="./assets/body/5/Untitled design.png" alt="meeting" />
+          </div>
+        </div>
+        <div class="dl-b7-dlApp-right flex flex-col bg-white gap-y-2 p-4">
+          <div
+            class="dl-b7-dlApp-right-top flex gap-x-4 justify-center items-center"
+          >
+            <div
+              class="dl-b7-dlApp-right-top-left flex flex-col gap-y-8 justify-center items-start"
+            >
+              <h2 class="text-black font-bold">
+                Dowload <br />
+                DigiLocker <br />
+                App
+              </h2>
+              <a href="#"
+                ><img
+                  src="./assets/body/6/qrcode.png"
+                  alt="QRcode"
+                  class="h-[100px]"
+              /></a>
+            </div>
+            <div class="dl-b7-dlApp-right-top-right">
+              <a href="#"
+                ><img
+                  src="./assets/body/6/right-side-img.png"
+                  alt="Phone"
+                  class="h-[230px]"
+              /></a>
+            </div>
+          </div>
+          <div class="dl-b7-dlApp-right-bottom flex justify-start gap-x-4">
+            <a href="#"
+              ><img
+                src="./assets/body/6/playstore_2.png"
+                alt="Playstore"
+                class="h-[30px]"
+            /></a>
+            <a href="#"
+              ><img
+                src="./assets/body/6/ios_1.png"
+                alt="Playstore"
+                class="h-[30px]"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dl-footer bg-navyBlue text-white">
+      <div
+        class="dl-f-top flex flex-col items-center gap-y-6 md:flex-row justify-around p-6 md:gap-x-2"
+      >
+        <div class="dl-f-top-1 flex flex-col gap-y-4">
+          <img
+            src="./assets/footer/top/digilocker-w-footer-logo.png"
+            alt="logo"
+            class="w-[300px] md:w-[200px]"
+          />
+          <p class="text-[15px] md:text-[12px] font-semibold">
+            Digilocker aims at 'Digital Empowerment' <br />
+            at the citizen by providing access in <br />activities digital
+            documents to the citizens <br />digital document wallet.
+          </p>
+          <h2 class="text-[20px]">FOLLOW US</h2>
+          <a href="#"
+            ><img
+              src="./assets/footer/top/social-icons.png"
+              alt="icons"
+              class="h-[60px] md:h-[50px]"
+          /></a>
+        </div>
+        <div class="dl-f-top-2">
+          <div class="dl-f-top-2-navlist hidden lg:flex lg:flex-col gap-y-4">
+            <div class="t2-list text-[14px]">Home</div>
+            <div class="t2-list text-[14px]">About</div>
+            <div class="t2-list text-[14px]">FAQ's</div>
+            <div class="t2-list text-[14px]">Statistics</div>
+            <div class="t2-list text-[14px]">Resourses</div>
+            <div class="t2-list text-[14px]">Circulars</div>
+          </div>
+        </div>
+        <div class="dl-f-top-3">
+          <div class="dl-f-top-3-navlist hidden lg:flex lg:flex-col gap-y-4">
+            <div class="t3-list text-[14px]">Need Help</div>
+            <div class="t3-list text-[14px]">Blog</div>
+            <div class="t3-list text-[14px]">Webinar</div>
+            <div class="t3-list text-[14px]">Credits</div>
+            <div class="t3-list text-[14px]">Partners</div>
+          </div>
+        </div>
+        <div class="dl-f-top-4 flex flex-col gap-y-4">
+          <a
+            href="#"
+            class="flex items-center gap-x-1 font-semibold text-[16px] md:text-[14px]"
+            >Powered By<img
+              src="./assets/footer/top/digital-india-logo.png"
+              alt="Digital India"
+              class=""
+          /></a>
+          <p class="text-[16px] md:text-[13px] font-semibold">
+            Digital India Corporation(DIC) <br />
+            Minisstry of Electronics & IT (MeitY) <br />
+            Government of India
+          </p>
+          <h3 class="font-semibold">DOWNLOAD APP</h3>
+          <a href="#" class="flex gap-x-4">
+            <img src="./assets/body/6/playstore_2.png" alt="playstore_2" />
+            <img src="./assets/body/6/ios_1.png" alt="ios" />
+          </a>
+        </div>
+      </div>
+
+      <div class="dl-f-bottom flex px-24 pb-2">
+        <h4 class="font-semibold text-[12px]">
+          Website designed and developed by Sayali Patil
+        </h4>
+      </div>
+    </div>
+  </body>
+</html>
